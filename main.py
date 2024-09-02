@@ -1,9 +1,8 @@
-import os
 from models import Student
 from utils import print_title
+import time
 
 def main_menu():
-    os.system('cls')
 
     print_title('Student Management System')
 
@@ -21,7 +20,24 @@ def main_menu():
         pass
 
 def add_student():
-    pass
+    
+    print_title('Add a Student')
+
+    name = input('Name: ')
+    age = input('Age: ')
+    classroom = input('Classroom: ')
+
+    student = Student(name, age, classroom)
+
+    student.save()
+
+    print(f'Student {student.name} added successfully!')
+
+    time.sleep(1)
+
+    main_menu()
+
+    
 
 def view_student():
     pass
