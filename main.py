@@ -15,7 +15,7 @@ def main_menu():
     option = input('Enter your option: ')
 
     if option == '1':
-        pass
+        add_student()
     elif option == '2':
         pass
 
